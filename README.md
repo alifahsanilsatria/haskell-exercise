@@ -29,3 +29,14 @@ Answer :
 2. concat (map (\x -> map (x+) ys) xs)
 3. map (+2) (filter (>3) xs)
 4. map (+3) (map fst xys)
+
+Can you it the other way around? I.e. rewrite the following expressions as list comprehensions.
+
+1. map (+3) xs 
+2. filter (>7) xs 
+3. concat (map (\x → map (\y → (x,y)) ys) xs) 
+4. filter (>3) (map (\(x,y) → x+y) xys)
+
+Answer :
+1. [ x+3 | x ← xs]
+2. [x | x ← xs, x > 7]
